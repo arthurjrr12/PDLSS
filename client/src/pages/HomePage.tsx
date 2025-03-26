@@ -77,19 +77,18 @@ const HomePage = () => {
           </div>
         </div>
         
-        {/* Modules Section */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold font-heading text-center mb-12">Explore Our Learning Modules</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {MODULES.map((module) => (
-              <ModuleCard 
-                key={module.id} 
-                module={module} 
-                onSelect={handleModuleSelect} 
-              />
-            ))}
-          </div>
+        {/* Call-to-Action Section */}
+        <div className="mt-20 text-center">
+          <h2 className="text-3xl font-bold font-heading mb-6">Ready to Start Your Journey?</h2>
+          <p className="text-lg text-[#6E7687] max-w-3xl mx-auto mb-8">
+            Select a career path that interests you and discover physics concepts tailored to your professional goals.
+          </p>
+          <button 
+            onClick={() => setLocation("/careers")} 
+            className="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition text-lg shadow-lg"
+          >
+            Choose Your Career Path
+          </button>
         </div>
       </div>
     </section>
