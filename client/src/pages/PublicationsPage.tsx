@@ -60,7 +60,7 @@ const PublicationsPage = () => {
             <select 
               value={yearFilter}
               onChange={(e) => setYearFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3A56E4]"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b980ff]"
             >
               <option>All Years</option>
               <option>2023</option>
@@ -91,7 +91,7 @@ const PublicationsPage = () => {
                       key={tagIndex} 
                       className={`px-3 py-1 ${
                         tag === "Physics" || tag === "Education" 
-                          ? "bg-[#3A56E4]/10 text-[#3A56E4]" 
+                          ? "bg-[#b980ff]/10 text-[#b980ff]" 
                           : "bg-[#FF9F43]/10 text-[#FF9F43]"
                       } text-sm rounded-full`}
                     >
@@ -108,7 +108,7 @@ const PublicationsPage = () => {
                   <span className="mr-4"><i className="far fa-calendar mr-1"></i> Published: {publication.date}</span>
                   <span><i className="fas fa-book mr-1"></i> {publication.journal}</span>
                 </div>
-                <a href="#" className="text-[#3A56E4] font-medium hover:underline">Read More <i className="fas fa-arrow-right ml-1"></i></a>
+                <a href="#" className="text-[#b980ff] font-medium hover:underline">Read More <i className="fas fa-arrow-right ml-1"></i></a>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ const PublicationsPage = () => {
         
         {filteredPublications.length > 0 && (
           <div className="flex justify-center mt-8">
-            <button className="px-6 py-2 bg-[#3A56E4] text-white rounded-md font-medium hover:bg-[#3A56E4]/90 transition">
+            <button className="px-6 py-2 bg-[#b980ff] text-white rounded-md font-medium hover:bg-[#b980ff]/90 transition">
               Load More Publications
             </button>
           </div>

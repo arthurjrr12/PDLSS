@@ -504,30 +504,57 @@ export const RESOURCE_CATEGORIES = [
 // Publications for the STEM Publications page
 export const PUBLICATIONS = [
   {
-    title: "Innovative Approaches to Teaching Quantum Mechanics in Undergraduate Physics",
-    excerpt: "This paper explores new methodologies for introducing complex quantum concepts to undergraduate students through interactive simulations and real-world applications.",
-    author: "Dr. Emily Chen, MIT",
-    date: "June 2023",
-    journal: "Journal of Physics Education",
+    title: "Strategies for Teaching Forces and Motion in STEM Education",
+    excerpt: "This research paper presents innovative teaching approaches for physics concepts related to forces and motion in STEM education, with emphasis on hands-on learning activities and real-world applications.",
+    author: "Dr. Maria Santos, University of the Philippines",
+    date: "January 2025",
+    journal: "International Journal of STEM Education",
     image: "https://images.unsplash.com/photo-1636466497217-06a74308cb4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
     tags: ["Physics", "Education"]
   },
   {
-    title: "Advances in Solar Cell Efficiency: A Physics-Based Approach",
-    excerpt: "This research examines how fundamental physics principles are driving breakthrough improvements in photovoltaic technology and solar energy conversion efficiency.",
-    author: "Dr. James Rodriguez, Stanford University",
-    date: "March 2023",
-    journal: "Renewable Energy Journal",
+    title: "Energy Conservation Principles in High School Physics: Effective Teaching Methods",
+    excerpt: "This study explores effective methodologies for teaching energy conservation principles to high school students, incorporating interactive demos and career-relevant applications.",
+    author: "Prof. David Rodriguez, Ateneo de Manila University",
+    date: "March 2024",
+    journal: "Science Education Research",
     image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-    tags: ["Engineering", "Renewable Energy"]
+    tags: ["Physics", "Education"]
   },
   {
-    title: "The Physics of Gravitational Waves and Implications for Future Space Missions",
-    excerpt: "This comprehensive review discusses recent gravitational wave discoveries and their significance for our understanding of the universe and future space exploration endeavors.",
-    author: "Dr. Sarah Johnson, California Institute of Technology",
-    date: "November 2022",
-    journal: "Astrophysical Journal",
+    title: "Integration of Technology in Physics Education: A Philippine Perspective",
+    excerpt: "This comprehensive review discusses how technology can enhance physics education in Philippine schools, covering simulation tools, mobile apps, and virtual laboratories.",
+    author: "Dr. Anna Reyes, De La Salle University",
+    date: "November 2024",
+    journal: "Asian Journal of Science Education",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-    tags: ["Astrophysics", "Space Exploration"]
+    tags: ["Physics", "Education", "Technology"]
+  },
+  {
+    title: "Career-Focused Physics Instruction: Connecting Classroom to Professions",
+    excerpt: "This paper examines the benefits of career-oriented physics instruction, showing how connecting physics concepts to engineering, medicine, and aviation careers improves student engagement and learning outcomes.",
+    author: "Dr. Miguel Santos, University of Santo Tomas",
+    date: "August 2024",
+    journal: "Career and Technical Education Research",
+    image: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+    tags: ["Physics", "Education", "Career Development"]
+  },
+  {
+    title: "Implementing Interactive Physics Experiments Using Low-Cost Materials",
+    excerpt: "This practical guide provides educators with detailed instructions for creating engaging physics demonstrations and experiments using affordable, locally available materials.",
+    author: "Prof. Lisa Tan, Mapúa University",
+    date: "February 2025",
+    journal: "Practical Physics Teaching",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+    tags: ["Physics", "Education", "Practical Teaching"]
+  },
+  {
+    title: "The Impact of STEMIFIED Instruction on Student Performance in Physics",
+    excerpt: "This study presents quantitative evidence showing how the STEMIFIED approach to physics instruction significantly improves student understanding, retention, and application of key concepts.",
+    author: "Dr. Rafael Cruz, Technological University of the Philippines",
+    date: "May 2024",
+    journal: "Science and Education Research",
+    image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+    tags: ["Physics", "Education", "Research"]
   }
 ];
