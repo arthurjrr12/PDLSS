@@ -1,3 +1,6 @@
+import stemLogo from '../../assets/stem-logo.png';  // Adjust path as needed
+import profilePhoto from '../../assets/profile-photo.png';  // Adjust path as needed
+
 const ContactUs = () => {
   return (
     <section className="bg-[#f8f9fa] py-16 px-6">
@@ -13,7 +16,7 @@ const ContactUs = () => {
           <div className="bg-white rounded-xl shadow-md p-8">
             <div className="flex items-center mb-6">
               <img 
-                src="/assets/stem-logo.png" 
+                src={stemLogo}
                 alt="STEM School Logo" 
                 className="h-16 mr-4"
               />
@@ -56,9 +59,9 @@ const ContactUs = () => {
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-[#b980ff] shadow-lg">
               <img 
-                src="/assets/profile-photo.png"
-                alt="Profile Photo" 
-                className="w-full h-full object-cover"
+                 src={profilePhoto}
+                 alt="Profile Photo" 
+                 className="w-full h-full object-cover"
               />
             </div>
             <h3 className="text-xl font-bold font-heading mb-2">Physics Teacher</h3>
