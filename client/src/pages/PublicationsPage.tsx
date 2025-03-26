@@ -72,61 +72,19 @@ const PublicationsPage = () => {
         </div>
       </div>
       
-      {/* Publications List */}
-      <div className="grid gap-6">
-        {filteredPublications.map((publication, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="md:w-1/4">
-                <img 
-                  src={publication.image} 
-                  alt="Journal Cover" 
-                  className="w-full h-40 object-cover rounded-lg"
-                />
-              </div>
-              <div className="md:w-3/4">
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {publication.tags.map((tag, tagIndex) => (
-                    <span 
-                      key={tagIndex} 
-                      className={`px-3 py-1 ${
-                        tag === "Physics" || tag === "Education" 
-                          ? "bg-[#b980ff]/10 text-[#b980ff]" 
-                          : "bg-[#FF9F43]/10 text-[#FF9F43]"
-                      } text-sm rounded-full`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="text-xl font-bold mb-2 font-heading">{publication.title}</h3>
-                <p className="text-[#6E7687] mb-3">
-                  {publication.excerpt}
-                </p>
-                <div className="flex flex-wrap items-center text-sm text-[#6E7687] mb-4">
-                  <span className="mr-4"><i className="fas fa-user mr-1"></i> {publication.author}</span>
-                  <span className="mr-4"><i className="far fa-calendar mr-1"></i> Published: {publication.date}</span>
-                  <span><i className="fas fa-book mr-1"></i> {publication.journal}</span>
-                </div>
-                <a href="#" className="text-[#b980ff] font-medium hover:underline">Read More <i className="fas fa-arrow-right ml-1"></i></a>
-              </div>
-            </div>
+      {/* Publications Under Development Message */}
+      <div className="bg-white rounded-xl shadow-md p-12 text-center">
+        <div className="flex flex-col items-center justify-center">
+          <div className="text-[#b980ff] mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
           </div>
-        ))}
-        
-        {filteredPublications.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-lg text-[#6E7687]">No publications found matching your search criteria.</p>
-          </div>
-        )}
-        
-        {filteredPublications.length > 0 && (
-          <div className="flex justify-center mt-8">
-            <button className="px-6 py-2 bg-[#b980ff] text-white rounded-md font-medium hover:bg-[#b980ff]/90 transition">
-              Load More Publications
-            </button>
-          </div>
-        )}
+          <h3 className="text-2xl font-bold mb-4 font-heading">Content for this topic is currently under development</h3>
+          <p className="text-[#6E7687] text-lg mb-6">
+            Please check back later for updates.
+          </p>
+        </div>
       </div>
     </section>
   );
