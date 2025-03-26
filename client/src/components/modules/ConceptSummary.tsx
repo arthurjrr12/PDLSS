@@ -178,7 +178,7 @@ const ConceptSummary = () => {
   }
   
   // Energy, Work and Power
-  if (currentModule?.id === 3 && currentSubmodule?.id === 9) {
+  if (currentModule?.id === 3 && currentSubmodule?.id === 1) {
     return (
       <div className="p-6">
         <h2 className="text-2xl font-bold mb-4 font-heading">Potential and Kinetic Energies</h2>
