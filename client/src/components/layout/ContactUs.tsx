@@ -13,7 +13,7 @@ const ContactUs = () => {
           <div className="bg-white rounded-xl shadow-md p-8">
             <div className="flex items-center mb-6">
               <img 
-                src="/assets/stem-logo.png" 
+                src="assets/stem-logo.png" 
                 alt="STEM School Logo" 
                 className="h-16 mr-4"
               />
@@ -56,7 +56,7 @@ const ContactUs = () => {
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-[#b980ff] shadow-lg">
               <img 
-                src="/assets/profile-photo.png"
+                src="assets/profile-photo.png"
                 alt="Profile Photo" 
                 className="w-full h-full object-cover"
               />
