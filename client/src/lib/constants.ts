@@ -89,64 +89,188 @@ export const MODULES = [
   }
 ];
 
-// Quiz questions for Introduction module, Basic Scientific Method
-export const BASIC_SCIENTIFIC_METHOD_QUIZ = [
-  {
-    question: "What is the first step in the scientific method?",
-    options: [
-      "Perform an experiment",
-      "Ask a question",
-      "Form a conclusion",
-      "Develop a hypothesis"
-    ],
-    correctAnswer: 1,
-    selectedAnswer: null
-  },
-  {
-    question: "A good scientific hypothesis must be:",
-    options: [
-      "Complicated and technical",
-      "Testable and falsifiable",
-      "Proven by previous research",
-      "Approved by senior scientists"
-    ],
-    correctAnswer: 1,
-    selectedAnswer: null
-  },
-  {
-    question: "What is the purpose of controlling variables in an experiment?",
-    options: [
-      "To make the experiment more complex",
-      "To ensure the experiment can be patented",
-      "To isolate the effect of the independent variable",
-      "To confirm the hypothesis is correct"
-    ],
-    correctAnswer: 2,
-    selectedAnswer: null
-  },
-  {
-    question: "Scientific theories:",
-    options: [
-      "Are just educated guesses",
-      "Cannot be changed once established",
-      "Are comprehensive explanations supported by extensive evidence",
-      "Are the same as scientific laws"
-    ],
-    correctAnswer: 2,
-    selectedAnswer: null
-  },
-  {
-    question: "What distinguishes a scientific observation from an inference?",
-    options: [
-      "Observations are always correct while inferences can be wrong",
-      "Observations are what we perceive directly, inferences are interpretations of observations",
-      "Observations require special equipment while inferences do not",
-      "Observations are quantitative while inferences are qualitative"
-    ],
-    correctAnswer: 1,
-    selectedAnswer: null
-  }
-];
+// Quiz questions for all modules
+export const QUIZZES = {
+  // Introduction to Physics - Basic Scientific Method 
+  "1-1": [
+    {
+      question: "What is the first step in the scientific method?",
+      options: [
+        "Perform an experiment",
+        "Ask a question",
+        "Form a conclusion",
+        "Develop a hypothesis"
+      ],
+      correctAnswer: 1,
+      selectedAnswer: null
+    },
+    {
+      question: "A good scientific hypothesis must be:",
+      options: [
+        "Complicated and technical",
+        "Testable and falsifiable",
+        "Proven by previous research",
+        "Approved by senior scientists"
+      ],
+      correctAnswer: 1,
+      selectedAnswer: null
+    },
+    {
+      question: "What is the purpose of controlling variables in an experiment?",
+      options: [
+        "To make the experiment more complex",
+        "To ensure the experiment can be patented",
+        "To isolate the effect of the independent variable",
+        "To confirm the hypothesis is correct"
+      ],
+      correctAnswer: 2,
+      selectedAnswer: null
+    },
+    {
+      question: "Scientific theories:",
+      options: [
+        "Are just educated guesses",
+        "Cannot be changed once established",
+        "Are comprehensive explanations supported by extensive evidence",
+        "Are the same as scientific laws"
+      ],
+      correctAnswer: 2,
+      selectedAnswer: null
+    },
+    {
+      question: "What distinguishes a scientific observation from an inference?",
+      options: [
+        "Observations are always correct while inferences can be wrong",
+        "Observations are what we perceive directly, inferences are interpretations of observations",
+        "Observations require special equipment while inferences do not",
+        "Observations are quantitative while inferences are qualitative"
+      ],
+      correctAnswer: 1,
+      selectedAnswer: null
+    }
+  ],
+  
+  // Forces & Motion - Uniformly Accelerated Motion (Single Pendulum and Double Pendulum)
+  "2-5": [
+    {
+      question: "Which equation correctly relates final velocity (v), initial velocity (u), acceleration (a), and time (t) for uniformly accelerated motion?",
+      options: [
+        "v = u + at²",
+        "v = u + at",
+        "v = u + a/t",
+        "v = ut + a"
+      ],
+      correctAnswer: 1,
+      selectedAnswer: null
+    },
+    {
+      question: "A car accelerates uniformly from rest to 25 m/s in 10 seconds. What is its acceleration?",
+      options: [
+        "2.5 m/s²",
+        "0.4 m/s²",
+        "4.0 m/s²",
+        "25 m/s²"
+      ],
+      correctAnswer: 0,
+      selectedAnswer: null
+    },
+    {
+      question: "In a velocity-time graph for uniformly accelerated motion, what does the slope represent?",
+      options: [
+        "Displacement",
+        "Velocity",
+        "Acceleration",
+        "Time"
+      ],
+      correctAnswer: 2,
+      selectedAnswer: null
+    },
+    {
+      question: "Which of the following correctly describes a simple pendulum's period when its length is doubled?",
+      options: [
+        "The period remains the same",
+        "The period doubles",
+        "The period increases by a factor of √2",
+        "The period increases by a factor of 1.414"
+      ],
+      correctAnswer: 1,
+      selectedAnswer: null
+    },
+    {
+      question: "What happens to the period of a simple pendulum if the mass of the bob is doubled?",
+      options: [
+        "The period remains the same",
+        "The period doubles",
+        "The period decreases by half",
+        "The period increases by √2"
+      ],
+      correctAnswer: 0,
+      selectedAnswer: null
+    }
+  ],
+  
+  // Energy - Potential and Kinetic Energies
+  "3-1": [
+    {
+      question: "The kinetic energy of an object is given by which formula?",
+      options: [
+        "KE = mv",
+        "KE = mgh",
+        "KE = (1/2)mv²",
+        "KE = (1/2)kx²"
+      ],
+      correctAnswer: 2,
+      selectedAnswer: null
+    },
+    {
+      question: "If the velocity of an object doubles, its kinetic energy:",
+      options: [
+        "Doubles",
+        "Increases by 50%",
+        "Quadruples",
+        "Remains the same"
+      ],
+      correctAnswer: 2,
+      selectedAnswer: null
+    },
+    {
+      question: "The gravitational potential energy of an object is calculated using:",
+      options: [
+        "PE = mv²",
+        "PE = mgh",
+        "PE = (1/2)kx²",
+        "PE = mg/h"
+      ],
+      correctAnswer: 1,
+      selectedAnswer: null
+    },
+    {
+      question: "A 2 kg mass is lifted to a height of 5 meters. If the gravitational acceleration is 10 m/s², what is its gravitational potential energy?",
+      options: [
+        "10 J",
+        "50 J",
+        "100 J",
+        "1000 J"
+      ],
+      correctAnswer: 2,
+      selectedAnswer: null
+    },
+    {
+      question: "When a ball is thrown upward, at the highest point its:",
+      options: [
+        "Kinetic energy is maximum, potential energy is minimum",
+        "Potential energy is maximum, kinetic energy is minimum",
+        "Both potential and kinetic energy are maximum",
+        "Both potential and kinetic energy are minimum"
+      ],
+      correctAnswer: 1,
+      selectedAnswer: null
+    }
+  ]
+};
+
+// For backward compatibility
+export const BASIC_SCIENTIFIC_METHOD_QUIZ = QUIZZES["1-1"];
 
 // Career paths
 export const CAREER_PATHS = [

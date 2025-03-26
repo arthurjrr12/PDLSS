@@ -8,7 +8,7 @@ import {
   QuizQuestion,
   LearningView
 } from "../lib/types";
-import { MODULES, BASIC_SCIENTIFIC_METHOD_QUIZ } from "../lib/constants";
+import { MODULES, QUIZZES, BASIC_SCIENTIFIC_METHOD_QUIZ } from "../lib/constants";
 import { apiRequest } from "../lib/queryClient";
 
 const LearningContext = createContext<LearningContextType | undefined>(undefined);
@@ -94,9 +94,13 @@ export const LearningProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const startQuiz = () => {
-    // For demo purposes, just load the Basic Scientific Method quiz
-    // In a real app, we would fetch the appropriate quiz based on the current module/submodule
-    setCurrentQuestions([...BASIC_SCIENTIFIC_METHOD_QUIZ.map(q => ({...q, selectedAnswer: null}))]);
+    if (!currentModule || !currentSubmodule) return;
+    
+    // Get the appropriate quiz based on the current module and submodule
+    const quizKey = `${currentModule.id}-${currentSubmodule.id}`;
+    const quizQuestions = QUIZZES[quizKey as keyof typeof QUIZZES] || QUIZZES["1-1"]; // Fallback to basic quiz
+    
+    setCurrentQuestions([...quizQuestions.map((q: any) => ({...q, selectedAnswer: null}))]);
     setCurrentQuestionIndex(0);
     setScore(0);
     setQuizInProgress(true);
