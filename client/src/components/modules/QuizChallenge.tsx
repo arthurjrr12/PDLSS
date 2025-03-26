@@ -37,9 +37,9 @@ const QuizChallenge = () => {
                 let optionClass = "p-4 border rounded-lg cursor-pointer transition";
                 
                 if (isSelected) optionClass += " selected";
-                if (isCorrect) optionClass += " correct bg-[#28C76F]/10 border-[#28C76F]";
-                else if (isIncorrect) optionClass += " incorrect bg-[#EA5455]/10 border-[#EA5455]";
-                else if (isSelected) optionClass += " bg-[#3A56E4]/20 border-[#3A56E4]";
+                if (isCorrect) optionClass += " correct bg-green-500/10 border-green-500";
+                else if (isIncorrect) optionClass += " incorrect bg-red-500/10 border-red-500";
+                else if (isSelected) optionClass += " bg-primary/20 border-primary";
                 
                 return (
                   <div 
@@ -49,10 +49,10 @@ const QuizChallenge = () => {
                   >
                     <div className="flex items-start">
                       <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center mr-3 mt-0.5 ${
-                        isSelected ? 'border-[#3A56E4] bg-[#3A56E4]/10' : 'border-gray-300'
+                        isSelected ? 'border-primary bg-primary/10' : 'border-gray-300'
                       }`}>
                         {isSelected && (
-                          <div className="w-3 h-3 rounded-full bg-[#3A56E4]"></div>
+                          <div className="w-3 h-3 rounded-full bg-primary"></div>
                         )}
                       </div>
                       <div>{option}</div>
@@ -67,7 +67,7 @@ const QuizChallenge = () => {
             <div className="flex items-center">
               <div className="w-full bg-gray-200 rounded-full h-2 w-48">
                 <div 
-                  className="bg-[#3A56E4] h-2 rounded-full" 
+                  className="bg-primary h-2 rounded-full" 
                   style={{ width: `${(currentQuestionIndex / currentQuestions.length) * 100}%` }}
                 ></div>
               </div>
@@ -82,8 +82,8 @@ const QuizChallenge = () => {
           <div className="text-center mb-8">
             {score >= 3 ? (
               <div className="achievement">
-                <div className="w-24 h-24 bg-[#28C76F]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-check-circle text-4xl text-[#28C76F]"></i>
+                <div className="w-24 h-24 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-check-circle text-4xl text-green-500"></i>
                 </div>
                 <h2 className="text-2xl font-bold font-heading mb-2">Congratulations!</h2>
                 <p className="text-lg mb-2">You passed the quiz challenge!</p>
@@ -91,8 +91,8 @@ const QuizChallenge = () => {
               </div>
             ) : (
               <div>
-                <div className="w-24 h-24 bg-[#EA5455]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-exclamation-circle text-4xl text-[#EA5455]"></i>
+                <div className="w-24 h-24 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-exclamation-circle text-4xl text-red-500"></i>
                 </div>
                 <h2 className="text-2xl font-bold font-heading mb-2">Keep practicing!</h2>
                 <p className="text-lg mb-2">You need to review and retake the quiz.</p>
@@ -141,14 +141,14 @@ const QuizChallenge = () => {
             {score >= 3 ? (
               <button 
                 onClick={() => window.location.reload()} // This is a placeholder; in a real app, we'd use a function from the learning context
-                className="px-6 py-3 bg-[#28C76F] text-white rounded-md font-medium hover:bg-[#28C76F]/90 transition"
+                className="px-6 py-3 bg-green-500 text-white rounded-md font-medium hover:bg-green-500/90 transition"
               >
                 Continue to Next Topic
               </button>
             ) : (
               <button 
                 onClick={() => window.location.reload()} // This is a placeholder; in a real app, we'd use a function from the learning context
-                className="px-6 py-3 bg-[#3A56E4] text-white rounded-md font-medium hover:bg-[#3A56E4]/90 transition"
+                className="px-6 py-3 bg-primary text-white rounded-md font-medium hover:bg-primary/90 transition"
               >
                 Retake Quiz
               </button>
