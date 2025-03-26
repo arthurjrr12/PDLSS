@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { MODULES } from "../lib/constants";
 import ModuleCard from "../components/elements/ModuleCard";
 import { useLearning } from "../contexts/LearningContext";
+import ContactUs from "../components/layout/ContactUs";
 
 const HomePage = () => {
   const [, setLocation] = useLocation();
@@ -91,6 +92,9 @@ const HomePage = () => {
           </button>
         </div>
       </div>
+
+      {/* Contact Us Section */}
+      <ContactUs />
     </section>
   );
 };

@@ -40,14 +40,14 @@ const PublicationsPage = () => {
               placeholder="Search publications..." 
               value={searchTerm}
               onChange={handleSearch}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3A56E4]"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b980ff]"
             />
           </div>
           <div className="flex gap-3">
             <select 
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3A56E4]"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b980ff]"
             >
               <option>All Categories</option>
               <option>Physics</option>

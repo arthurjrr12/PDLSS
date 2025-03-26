@@ -6,7 +6,10 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 font-heading">Physics Digital Learning Support System</h3>
+            <div className="flex items-center mb-4">
+              <img src="/assets/stem-logo.png" alt="STEM School Logo" className="h-12 mr-3" />
+              <h3 className="text-xl font-bold font-heading">Physics Digital Learning Support System</h3>
+            </div>
             <p className="text-gray-400 mb-4">
               Revolutionizing physics education through career-focused, interactive learning experiences.
             </p>
@@ -54,15 +57,25 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mt-1.5 mr-3"></i>
-                <span>123 Education Street, Academic City, 10001</span>
+                <span>Mambugan, Antipolo City</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1.5 mr-3"></i>
-                <span>info@physlearn.edu</span>
+                <span>daize100@yahoo.com</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-phone mt-1.5 mr-3"></i>
-                <span>+1 (555) 123-4567</span>
+                <span>+639691786753</span>
+              </li>
+              <li className="flex items-start mt-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
+                  <img 
+                    src="/assets/profile-photo.png" 
+                    alt="Profile Photo" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="mt-2">Physics Teacher</span>
               </li>
             </ul>
           </div>
