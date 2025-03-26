@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <section className="min-h-[calc(100vh-80px)]">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#3A56E4]/95 to-[#3A56E4]/80 text-white py-24 px-6">
+      <div className="bg-gradient-to-r from-[#b980ff]/95 to-[#b980ff]/80 text-white py-24 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
@@ -53,24 +53,24 @@ const HomePage = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <div className="w-14 h-14 bg-[#3A56E4]/10 rounded-full flex items-center justify-center mb-4">
-              <i className="fas fa-graduation-cap text-2xl text-[#3A56E4]"></i>
+            <div className="w-14 h-14 bg-[#b980ff]/10 rounded-full flex items-center justify-center mb-4">
+              <i className="fas fa-graduation-cap text-2xl text-[#b980ff]"></i>
             </div>
             <h3 className="text-xl font-bold mb-3 font-heading">Career-Focused Learning</h3>
             <p className="text-[#6E7687]">Physics content tailored to specific career paths, making learning relevant to your future goals.</p>
           </div>
           
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <div className="w-14 h-14 bg-[#3A56E4]/10 rounded-full flex items-center justify-center mb-4">
-              <i className="fas fa-flask text-2xl text-[#3A56E4]"></i>
+            <div className="w-14 h-14 bg-[#b980ff]/10 rounded-full flex items-center justify-center mb-4">
+              <i className="fas fa-flask text-2xl text-[#b980ff]"></i>
             </div>
             <h3 className="text-xl font-bold mb-3 font-heading">STEM-Based Activities</h3>
             <p className="text-[#6E7687]">Engage with interactive experiments and projects that reinforce physics concepts through practical application.</p>
           </div>
           
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <div className="w-14 h-14 bg-[#3A56E4]/10 rounded-full flex items-center justify-center mb-4">
-              <i className="fas fa-trophy text-2xl text-[#3A56E4]"></i>
+            <div className="w-14 h-14 bg-[#b980ff]/10 rounded-full flex items-center justify-center mb-4">
+              <i className="fas fa-trophy text-2xl text-[#b980ff]"></i>
             </div>
             <h3 className="text-xl font-bold mb-3 font-heading">Gamified Approach</h3>
             <p className="text-[#6E7687]">Track progress, earn achievements, and stay motivated with our engaging learning system.</p>
