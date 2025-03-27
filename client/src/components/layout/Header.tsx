@@ -25,8 +25,8 @@ const Header = () => {
     <header className="bg-white shadow-sm fixed w-full top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <div className="text-[#3A56E4] font-bold text-xl md:text-2xl font-heading">
-            <i className="fas fa-atom mr-2"></i>PhysLearn
+          <div className="text-[#B8A6D9] font-bold text-xl md:text-2xl font-heading">
+            <i className="fas fa-atom mr-2"></i>PhysEdu
           </div>
         </Link>
         
@@ -40,7 +40,7 @@ const Header = () => {
                 navigateTo(item.path);
               }}
               href={item.path}
-              className={`font-medium ${location === item.path ? 'text-[#3A56E4]' : 'text-gray-600 hover:text-[#3A56E4]'} transition`}
+              className={`font-medium ${location === item.path ? 'text-[#B8A6D9]' : 'text-gray-600 hover:text-[#B8A6D9]'} transition`}
             >
               {item.label}
             </a>

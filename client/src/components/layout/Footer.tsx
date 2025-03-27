@@ -1,4 +1,6 @@
 import { Link } from "wouter";
+import stemLogo from '../../assets/stem-logo.png';  // Adjust path as needed
+import profilePhoto from '../../assets/profile-photo.png';
 
 const Footer = () => {
   return (
@@ -7,7 +9,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img src="/assets/stem-logo.png" alt="STEM School Logo" className="h-12 mr-3" />
+              <img src={stemLogo}
+                alt="STEM School Logo" className="h-12 mr-3" />
               <h3 className="text-xl font-bold font-heading">Physics Digital Learning Support System</h3>
             </div>
             <p className="text-gray-400 mb-4">
@@ -70,7 +73,7 @@ const Footer = () => {
               <li className="flex items-start mt-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
                   <img 
-                    src="/assets/profile-photo.png" 
+                    src={profilePhoto}
                     alt="Profile Photo" 
                     className="w-full h-full object-cover"
                   />
