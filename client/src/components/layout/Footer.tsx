@@ -78,7 +78,11 @@ const Footer = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <span className="mt-2">Physics Teacher</span>
+                <span className="mt-2">
+  Physics Teacher
+  <br />
+  Daisy Mae Reyes Bongtiwon 
+</span>
               </li>
             </ul>
           </div>
@@ -86,7 +90,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Physics Digital Learning Support System. All rights reserved.
+            &copy; {new Date().getFullYear()} STEM School. All rights reserved.
           </p>
           <div className="flex space-x-4 text-sm text-gray-400">
             <a href="#" className="hover:text-white transition">Privacy Policy</a>

@@ -64,7 +64,10 @@ const ContactUs = () => {
                  className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-bold font-heading mb-2">Physics Teacher</h3>
+            <h3 className="text-xl font-bold font-heading mb-2">Physics Teacher
+              <br />
+              Daisy Mae Reyes Bongtiwon
+            </h3>
             <p className="text-[#6E7687] text-center">
               Dedicated to making physics education accessible and engaging for all students.
             </p>
