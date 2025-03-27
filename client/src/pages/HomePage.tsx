@@ -3,6 +3,7 @@ import { MODULES } from "../lib/constants";
 import ModuleCard from "../components/elements/ModuleCard";
 import { useLearning } from "../contexts/LearningContext";
 import ContactUs from "../components/layout/ContactUs";
+import stemLogo from '../assets/stem-logo.png';
 
 const HomePage = () => {
   const [, setLocation] = useLocation();
@@ -27,16 +28,16 @@ const HomePage = () => {
               </p>
               <button 
                 onClick={() => setLocation("/careers")} 
-                className="px-8 py-3 bg-[#FF9F43] text-[#2C3E50] font-bold rounded-lg hover:bg-[#FF9F43]/90 transition text-lg shadow-lg"
+                className="px-8 py-3 bg-[#3A56E4] text-white font-bold rounded-lg hover:bg-[#3A56E4]/90 transition text-lg shadow-lg"
               >
                 Get Started
               </button>
             </div>
             <div className="order-1 md:order-2 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80" 
-                alt="Physics Learning" 
-                className="rounded-lg shadow-xl max-w-full h-auto"
+            <img 
+  src={stemLogo}
+  alt="Physics Learning" 
+  className="rounded-lg shadow-xl max-w-full h-auto"
               />
             </div>
           </div>
