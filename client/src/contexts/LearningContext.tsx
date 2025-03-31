@@ -8,7 +8,14 @@ import {
   QuizQuestion,
   LearningView
 } from "../lib/types";
-import { MODULES, QUIZZES, BASIC_SCIENTIFIC_METHOD_QUIZ } from "../lib/constants";
+import { 
+  MODULES, 
+  ENGINEERING_MODULES, 
+  MEDICINE_MODULES, 
+  AVIATION_MODULES, 
+  QUIZZES, 
+  BASIC_SCIENTIFIC_METHOD_QUIZ 
+} from "../lib/constants";
 import { apiRequest } from "../lib/queryClient";
 
 const LearningContext = createContext<LearningContextType | undefined>(undefined);
@@ -69,6 +76,22 @@ export const LearningProvider = ({ children }: { children: ReactNode }) => {
 
   const selectCareerPath = (path: CareerPath) => {
     setCareerPath(path);
+    
+    // Load appropriate modules based on career path
+    switch(path) {
+      case "engineering":
+        setModules(ENGINEERING_MODULES);
+        break;
+      case "medicine":
+        setModules(MEDICINE_MODULES);
+        break;
+      case "aviation":
+        setModules(AVIATION_MODULES);
+        break;
+      default:
+        setModules(ENGINEERING_MODULES); // Default to engineering
+    }
+    
     setLocation("/learning");
   };
 

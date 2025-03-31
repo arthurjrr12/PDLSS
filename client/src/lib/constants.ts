@@ -1,9 +1,9 @@
-// Module and submodule data for the learning system
-export const MODULES = [
+// Module and submodule data for the learning system based on career paths
+export const ENGINEERING_MODULES = [
   {
     id: 1,
     title: "Introduction to Physics",
-    description: "Master the fundamental principles and methods that form the foundation of physics.",
+    description: "Master the fundamental principles and methods that form the foundation of physics for engineering.",
     progress: 0,
     completed: false,
     totalSubmodules: 6,
@@ -88,6 +88,190 @@ export const MODULES = [
     ]
   }
 ];
+
+export const MEDICINE_MODULES = [
+  {
+    id: 1,
+    title: "Introduction to Biophysics",
+    description: "Explore the fundamental physics principles that underlie medical science and human physiology.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 5,
+    submodules: [
+      { id: 1, title: "Scientific Method in Medical Research", progress: 0, completed: false },
+      { id: 2, title: "Measurement and Uncertainty in Medicine", progress: 0, completed: false },
+      { id: 3, title: "Units and Dimensions in Physiology", progress: 0, completed: false },
+      { id: 4, title: "Biostatistics Fundamentals", progress: 0, completed: false },
+      { id: 5, title: "Laboratory Safety and Radiation Protection", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 2,
+    title: "Biomechanics",
+    description: "Study the mechanical principles of living organisms, focusing on human movement and structure.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 5,
+    submodules: [
+      { id: 1, title: "Skeletal System Mechanics", progress: 0, completed: false },
+      { id: 2, title: "Joint Dynamics and Forces", progress: 0, completed: false },
+      { id: 3, title: "Musculoskeletal Biomechanics", progress: 0, completed: false },
+      { id: 4, title: "Balance and Posture Physics", progress: 0, completed: false },
+      { id: 5, title: "Gait Analysis and Rehabilitation", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 3,
+    title: "Fluid Dynamics in Physiology",
+    description: "Analyze how fluids flow within the human body and their crucial role in physiological functions.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 4,
+    submodules: [
+      { id: 1, title: "Cardiovascular Hemodynamics", progress: 0, completed: false },
+      { id: 2, title: "Respiratory Fluid Mechanics", progress: 0, completed: false },
+      { id: 3, title: "Cerebrospinal Fluid Dynamics", progress: 0, completed: false },
+      { id: 4, title: "Glomerular Filtration and Renal Flow", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 4,
+    title: "Medical Imaging Physics",
+    description: "Understand the physics principles behind the technologies that allow us to see inside the human body.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 5,
+    submodules: [
+      { id: 1, title: "X-ray Physics and Radiography", progress: 0, completed: false },
+      { id: 2, title: "Computed Tomography (CT) Principles", progress: 0, completed: false },
+      { id: 3, title: "Magnetic Resonance Imaging (MRI)", progress: 0, completed: false },
+      { id: 4, title: "Ultrasound Physics", progress: 0, completed: false },
+      { id: 5, title: "Nuclear Medicine and PET Imaging", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 5,
+    title: "Radiation in Medicine",
+    description: "Explore the uses and effects of radiation in diagnostic and therapeutic medical applications.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 4,
+    submodules: [
+      { id: 1, title: "Radiation Biology and Health Effects", progress: 0, completed: false },
+      { id: 2, title: "Radiation Therapy Principles", progress: 0, completed: false },
+      { id: 3, title: "Dosimetry and Radiation Safety", progress: 0, completed: false },
+      { id: 4, title: "Advanced Radiation Treatment Modalities", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 6,
+    title: "Bioelectricity",
+    description: "Study the electrical phenomena in biological tissues and their medical applications.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 4,
+    submodules: [
+      { id: 1, title: "Neurophysics and Action Potentials", progress: 0, completed: false },
+      { id: 2, title: "Electrocardiography (ECG) Physics", progress: 0, completed: false },
+      { id: 3, title: "Electroencephalography (EEG) Principles", progress: 0, completed: false },
+      { id: 4, title: "Medical Device Biophysics", progress: 0, completed: false }
+    ]
+  }
+];
+
+export const AVIATION_MODULES = [
+  {
+    id: 1,
+    title: "Fundamentals of Aviation Physics",
+    description: "Master the core physics principles that make flight possible and safe.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 4,
+    submodules: [
+      { id: 1, title: "Scientific Method in Flight Testing", progress: 0, completed: false },
+      { id: 2, title: "Measurement Systems in Aircraft", progress: 0, completed: false },
+      { id: 3, title: "Units and Standards in Aviation", progress: 0, completed: false },
+      { id: 4, title: "Vector Analysis for Flight Paths", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 2,
+    title: "Aerodynamics",
+    description: "Study how air interacts with moving objects, with a focus on aircraft design and performance.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 6,
+    submodules: [
+      { id: 1, title: "Principles of Lift", progress: 0, completed: false },
+      { id: 2, title: "Drag and Air Resistance", progress: 0, completed: false },
+      { id: 3, title: "Airfoil Design and Performance", progress: 0, completed: false },
+      { id: 4, title: "Bernoulli's Principle in Flight", progress: 0, completed: false },
+      { id: 5, title: "Subsonic vs. Supersonic Flight", progress: 0, completed: false },
+      { id: 6, title: "High-Altitude Aerodynamics", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 3,
+    title: "Aircraft Propulsion",
+    description: "Understand the physics of aircraft engines and propulsion systems.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 4,
+    submodules: [
+      { id: 1, title: "Jet Engine Thermodynamics", progress: 0, completed: false },
+      { id: 2, title: "Propeller Physics", progress: 0, completed: false },
+      { id: 3, title: "Rocket Propulsion Basics", progress: 0, completed: false },
+      { id: 4, title: "Fuel Efficiency and Energy Conversion", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 4,
+    title: "Aviation Weather Physics",
+    description: "Explore the physical processes that drive weather phenomena critical to aviation safety.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 5,
+    submodules: [
+      { id: 1, title: "Atmospheric Thermodynamics", progress: 0, completed: false },
+      { id: 2, title: "Cloud Formation and Precipitation", progress: 0, completed: false },
+      { id: 3, title: "Wind Patterns and Jet Streams", progress: 0, completed: false },
+      { id: 4, title: "Turbulence and Wind Shear Physics", progress: 0, completed: false },
+      { id: 5, title: "Thunderstorm and Lightning Physics", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 5,
+    title: "Navigation and Avionics",
+    description: "Study the physical principles behind aviation navigation and electronic systems.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 4,
+    submodules: [
+      { id: 1, title: "GPS and Satellite Navigation Physics", progress: 0, completed: false },
+      { id: 2, title: "Radar and Radio Wave Propagation", progress: 0, completed: false },
+      { id: 3, title: "Inertial Navigation Systems", progress: 0, completed: false },
+      { id: 4, title: "Electromagnetic Interference in Avionics", progress: 0, completed: false }
+    ]
+  },
+  {
+    id: 6,
+    title: "Flight Mechanics",
+    description: "Analyze the physics of aircraft stability, control, and maneuverability.",
+    progress: 0,
+    completed: false,
+    totalSubmodules: 5,
+    submodules: [
+      { id: 1, title: "Center of Gravity and Balance", progress: 0, completed: false },
+      { id: 2, title: "Aircraft Stability and Control", progress: 0, completed: false },
+      { id: 3, title: "Forces in Turns and Maneuvers", progress: 0, completed: false },
+      { id: 4, title: "Stall Physics and Recovery", progress: 0, completed: false },
+      { id: 5, title: "G-Forces and Human Physiology", progress: 0, completed: false }
+    ]
+  }
+];
+
+// Default modules set (will be overridden by career path selection)
+export const MODULES = ENGINEERING_MODULES;
 
 // Quiz questions for all modules
 export const QUIZZES = {

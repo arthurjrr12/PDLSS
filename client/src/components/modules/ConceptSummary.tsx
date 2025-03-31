@@ -1,7 +1,10 @@
 import { useLearning } from "../../contexts/LearningContext";
+import { CareerPath } from "../../lib/types";
 
 const ConceptSummary = () => {
-  const { currentModule, currentSubmodule } = useLearning();
+  const { currentModule, currentSubmodule, careerPath } = useLearning();
+  // Type guard for empty career path
+  const hasNoCareerPath = !careerPath || careerPath === "" as unknown as CareerPath;
 
   // Basic Scientific Method content (Introduction to Physics module)
   if (currentModule?.id === 1 && currentSubmodule?.id === 1) {
@@ -59,23 +62,92 @@ const ConceptSummary = () => {
           </div>
         </div>
         
+        {/* Career-specific applications */}
         <div>
-          <h3 className="text-xl font-bold mb-3 font-heading">Application in Physics</h3>
-          <p className="mb-3">
-            In physics, the scientific method is used to investigate natural phenomena, develop models of physical systems, and discover the fundamental laws governing the universe. For example:
-          </p>
+          {careerPath === "engineering" && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Engineering</h3>
+              <p className="mb-3">
+                Engineers use the scientific method to test materials, optimize designs, and solve complex technical problems.
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Testing a New Bridge Design</h4>
+                <ol className="list-decimal pl-5 space-y-1">
+                  <li><strong>Question:</strong> Will this new bridge design support the required load?</li>
+                  <li><strong>Research:</strong> Study existing bridge designs and material properties.</li>
+                  <li><strong>Hypothesis:</strong> The new design will support 20% more weight than current designs.</li>
+                  <li><strong>Experiment:</strong> Build scale models and test in controlled conditions.</li>
+                  <li><strong>Analysis:</strong> Compare stress distribution and failure points with predictions.</li>
+                  <li><strong>Conclusion:</strong> Determine if the design meets or exceeds specifications.</li>
+                </ol>
+              </div>
+            </>
+          )}
           
-          <div className="bg-secondary/5 p-4 rounded-lg">
-            <h4 className="font-bold mb-2">Example: Investigating the Law of Reflection</h4>
-            <ol className="list-decimal pl-5 space-y-1">
-              <li><strong>Question:</strong> Does the angle of incidence equal the angle of reflection for a light beam?</li>
-              <li><strong>Research:</strong> Study existing literature on reflection of light.</li>
-              <li><strong>Hypothesis:</strong> The angle of incidence equals the angle of reflection.</li>
-              <li><strong>Experiment:</strong> Set up a light source, mirror, and protractor to measure angles.</li>
-              <li><strong>Analysis:</strong> Compare measured angles of incidence and reflection.</li>
-              <li><strong>Conclusion:</strong> Determine if the data supports the hypothesis.</li>
-            </ol>
-          </div>
+          {careerPath === "medicine" && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Medical Research</h3>
+              <p className="mb-3">
+                Medical researchers utilize the scientific method to develop treatments, understand disease mechanisms, and improve patient outcomes.
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Testing a New Drug's Effectiveness</h4>
+                <ol className="list-decimal pl-5 space-y-1">
+                  <li><strong>Question:</strong> Does this new compound reduce inflammation in arthritis patients?</li>
+                  <li><strong>Research:</strong> Review existing anti-inflammatory medications and their mechanisms.</li>
+                  <li><strong>Hypothesis:</strong> The new compound will reduce inflammation by 30% with fewer side effects.</li>
+                  <li><strong>Experiment:</strong> Conduct randomized controlled clinical trials with appropriate dosing.</li>
+                  <li><strong>Analysis:</strong> Compare inflammation markers and patient-reported outcomes between treatment and control groups.</li>
+                  <li><strong>Conclusion:</strong> Determine if the drug is effective and safe enough for approval.</li>
+                </ol>
+              </div>
+            </>
+          )}
+          
+          {careerPath === "aviation" && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Aviation</h3>
+              <p className="mb-3">
+                Pilots and aerospace engineers rely on the scientific method to improve aircraft performance, safety, and efficiency.
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Optimizing Aircraft Fuel Efficiency</h4>
+                <ol className="list-decimal pl-5 space-y-1">
+                  <li><strong>Question:</strong> Will a modified winglet design reduce fuel consumption?</li>
+                  <li><strong>Research:</strong> Study aerodynamics and existing winglet configurations.</li>
+                  <li><strong>Hypothesis:</strong> The new winglet design will reduce drag and improve fuel efficiency by 3%.</li>
+                  <li><strong>Experiment:</strong> Test in wind tunnels and with computer simulations before flight testing.</li>
+                  <li><strong>Analysis:</strong> Compare fuel consumption, drag coefficients, and performance metrics.</li>
+                  <li><strong>Conclusion:</strong> Determine if the design should be implemented across the fleet.</li>
+                </ol>
+              </div>
+            </>
+          )}
+          
+          {/* Default example if no career path is selected */}
+          {hasNoCareerPath && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Physics</h3>
+              <p className="mb-3">
+                In physics, the scientific method is used to investigate natural phenomena, develop models of physical systems, and discover the fundamental laws governing the universe. For example:
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Investigating the Law of Reflection</h4>
+                <ol className="list-decimal pl-5 space-y-1">
+                  <li><strong>Question:</strong> Does the angle of incidence equal the angle of reflection for a light beam?</li>
+                  <li><strong>Research:</strong> Study existing literature on reflection of light.</li>
+                  <li><strong>Hypothesis:</strong> The angle of incidence equals the angle of reflection.</li>
+                  <li><strong>Experiment:</strong> Set up a light source, mirror, and protractor to measure angles.</li>
+                  <li><strong>Analysis:</strong> Compare measured angles of incidence and reflection.</li>
+                  <li><strong>Conclusion:</strong> Determine if the data supports the hypothesis.</li>
+                </ol>
+              </div>
+            </>
+          )}
         </div>
       </div>
     );
@@ -248,24 +320,97 @@ const ConceptSummary = () => {
           </div>
         </div>
         
+        {/* Career-specific applications */}
         <div>
-          <h3 className="text-xl font-bold mb-3 font-heading">Application in Engineering</h3>
-          <p className="mb-3">
-            Understanding energy principles is essential for engineers designing systems that convert or conserve energy.
-          </p>
+          {careerPath === "engineering" && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Engineering</h3>
+              <p className="mb-3">
+                Understanding energy principles is essential for engineers designing systems that convert, store, or conserve energy.
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Designing a Hydro Storage System</h4>
+                <p className="mb-2">An engineering team is designing a pumped hydro storage system. They need to determine how much water to pump to a reservoir 300m above a turbine to store 5 GJ of energy.</p>
+                
+                <div className="p-3 bg-white rounded border">
+                  <p className="font-semibold">Solution:</p>
+                  <p>Using the gravitational potential energy formula: PE = mgh</p>
+                  <p>5,000,000,000 J = m × 9.8 m/s² × 300 m</p>
+                  <p>m = 5,000,000,000 J ÷ (9.8 m/s² × 300 m)</p>
+                  <p>m = 1,700,680 kg or approximately 1,700 metric tons of water</p>
+                </div>
+              </div>
+            </>
+          )}
           
-          <div className="bg-secondary/5 p-4 rounded-lg">
-            <h4 className="font-bold mb-2">Example: Calculating the Kinetic Energy of a Vehicle</h4>
-            <p className="mb-2">A 1500 kg car travels at a speed of 25 m/s. What is its kinetic energy?</p>
-            
-            <div className="p-3 bg-white rounded border">
-              <p className="font-semibold">Solution:</p>
-              <p>Using the formula KE = (1/2)mv²:</p>
-              <p>KE = (1/2) × 1500 kg × (25 m/s)²</p>
-              <p>KE = (1/2) × 1500 kg × 625 m²/s²</p>
-              <p>KE = 468,750 Joules or approximately 469 kJ</p>
-            </div>
-          </div>
+          {careerPath === "medicine" && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Medicine</h3>
+              <p className="mb-3">
+                Energy principles help medical professionals understand physiological processes, diagnostic techniques, and medical technologies.
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Analyzing Traumatic Impact</h4>
+                <p className="mb-2">A trauma specialist is analyzing a fall injury. A 70 kg patient fell from a height of 2 meters. What potential energy was converted to kinetic energy during the fall, potentially causing injury?</p>
+                
+                <div className="p-3 bg-white rounded border">
+                  <p className="font-semibold">Solution:</p>
+                  <p>Using the gravitational potential energy formula: PE = mgh</p>
+                  <p>PE = 70 kg × 9.8 m/s² × 2 m</p>
+                  <p>PE = 1,372 Joules</p>
+                  <p className="mt-2">This energy would be converted to kinetic energy just before impact and then transferred to the body's tissues, potentially causing injury. Medical devices like protective pads are designed to absorb and dissipate this energy gradually.</p>
+                </div>
+              </div>
+            </>
+          )}
+          
+          {careerPath === "aviation" && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Aviation</h3>
+              <p className="mb-3">
+                Energy principles are fundamental to understanding aircraft performance, fuel efficiency, and safety considerations.
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Calculating Kinetic Energy During Landing</h4>
+                <p className="mb-2">A 30,000 kg aircraft is approaching a runway at a landing speed of 70 m/s (approximately 250 km/h). What is the kinetic energy that must be dissipated during landing?</p>
+                
+                <div className="p-3 bg-white rounded border">
+                  <p className="font-semibold">Solution:</p>
+                  <p>Using the kinetic energy formula: KE = (1/2)mv²</p>
+                  <p>KE = (1/2) × 30,000 kg × (70 m/s)²</p>
+                  <p>KE = 0.5 × 30,000 kg × 4,900 m²/s²</p>
+                  <p>KE = 73,500,000 Joules or 73.5 MJ</p>
+                  <p className="mt-2">This enormous amount of energy must be safely dissipated through braking systems, thrust reversers, and aerodynamic drag during landing.</p>
+                </div>
+              </div>
+            </>
+          )}
+          
+          {/* Default example if no career path is selected */}
+          {hasNoCareerPath && (
+            <>
+              <h3 className="text-xl font-bold mb-3 font-heading">Application in Physics</h3>
+              <p className="mb-3">
+                Understanding energy principles is essential for analyzing physical systems and solving practical problems.
+              </p>
+              
+              <div className="bg-secondary/5 p-4 rounded-lg">
+                <h4 className="font-bold mb-2">Example: Calculating the Kinetic Energy of a Vehicle</h4>
+                <p className="mb-2">A 1500 kg car travels at a speed of 25 m/s. What is its kinetic energy?</p>
+                
+                <div className="p-3 bg-white rounded border">
+                  <p className="font-semibold">Solution:</p>
+                  <p>Using the formula KE = (1/2)mv²:</p>
+                  <p>KE = (1/2) × 1500 kg × (25 m/s)²</p>
+                  <p>KE = (1/2) × 1500 kg × 625 m²/s²</p>
+                  <p>KE = 468,750 Joules or approximately 469 kJ</p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     );
